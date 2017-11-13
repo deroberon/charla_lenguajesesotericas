@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--<link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">-->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Lenguages Esotericas</h1>
+				</section>
+				<section>
+					<h1>Intercal</h1>
+					<p><a href="http://www.catb.org/~esr/intercal/"></a></p>
+				</section>
+				<section>
+					<h2>Conceptos</h2>
+					<p><a href="http://www.catb.org/~esr/intercal/ick.htm">http://www.catb.org/~esr/intercal/ick.htm</a></p>
+				</section>
+				<section>
+					<h3>Information Hiding</h3>
+					<p>"the easiest way to store the value of 65536 in a 32-bit INTERCAL variable is:"</p>
+					<pre><code data-trim>
+					DO:1<-#0$#256
+					</code></pre>
+				</section>
+				<section>
+					<h3>Execution Chance</h3>
+				</section>
+				<section>
+					<h3>Simplicity</h3>
+					<p>Los operadores lógicos son... unarios: &,v,?</p>
+					<p>"INTERCAL is also very simple. For example, in most languages the logical operators AND, OR, and XOR are binary, i.e., they require two operands to operate on. In INTERCAL, AND, OR, and XOR are unary operators"</p>
+					<pre><code>#&77</code></pre>
+					<p>Siendo 77 (0000000001001101), &77 seria (0000000000000100), o sea: 4</p>
+				</section>
+				<section>
+					<h3>Use of GOTO Considered Harmful</h3>
+					<p>"Dijkstra's seminal paper "Use of GOTO Considered Harmful" was published in Communications of the ACM"</p>
+					<p>Intercall compreende la importancia de una implementacion estructurada y utiliza el completo opuesto</p>
+					<pre><code data-trim>
+						(10) PLEASE DON'T GIVE UP
+						(19) COME FROM 40
+						(20) FORGET #1
+						(30) FORGET #2
+						(40) COME FROM 19
+						(50) GIVE UP
+					</code></pre>
+				</section>
+				<section>
+					<h3>Education</h3>
+					<p>Los lenguages actuales son... muy mal educados. Asi, Intercal implementa el comando PLEASE</p>
+					<p>Bueno... no sirve para nada en realidad... Pero si no lo pones una buena cuantidad en tu código, el no se vá a compilar por su falta de educación</p>
+					<p>Pero ojo: Si lo pone demasiado, tampoco se va a compilar por ser muy prolijo y falso</p>
+				</section>
+				<section>
+					<h2>Ejemplo de Hello World</h2>
+					<pre><code data-trim>
+					DO ,1 <- #13
+					PLEASE DO ,1 SUB #1 <- #238
+					DO ,1 SUB #2 <- #108
+					DO ,1 SUB #3 <- #112
+					DO ,1 SUB #4 <- #0
+					DO ,1 SUB #5 <- #64
+					DO ,1 SUB #6 <- #194
+					PLEASE DO ,1 SUB #7 <- #48
+					DO ,1 SUB #8 <- #26
+					DO ,1 SUB #9 <- #244
+					PLEASE DO ,1 SUB #10 <- #168
+					DO ,1 SUB #11 <- #24
+					DO ,1 SUB #12 <- #16
+					DO ,1 SUB #13 <- #162
+					PLEASE READ OUT ,1
+					PLEASE GIVE UP
+					</code></pre>
+				</section>
+				<section>
+					<h2>Emulador de Intercal Online</h2>
+					<p><a href="https://www.jdoodle.com/compile-intercal-online">https://www.jdoodle.com/compile-intercal-online</a></p>
+					<p><a href="https://www.tutorialspoint.com/compile_intercal_online.php">https://www.tutorialspoint.com/compile_intercal_online.php</a></p>
+				</section>
+				<section>
+					<h1>Brainfuck</h1>
+				</section>
+				<section>
+					<h1>Befunge</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				math: {
+		mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	},
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true },
+					//{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
